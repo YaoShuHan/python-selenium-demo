@@ -5,13 +5,10 @@ from selenium.webdriver.common.by import By
 from pages.home.page_fatures import *
 from fatures.bro_fatures import myBrowser
 import unittest
-import tests.case_test
-
 
 class LoginTests(unittest.TestCase):
-
     def setUp(self):
-        self.driver = myBrowser.tobowser(tests.case_test.baseUrl)
+        self.driver = myBrowser.tobowser("https://mail.qq.com")
         # 访问mail.qq
         # baseUrl = "https://mail.qq.com"
         # self.driver = webdriver.Chrome()
@@ -20,8 +17,7 @@ class LoginTests(unittest.TestCase):
         # self.driver.get(baseUrl)
 
     def test_qqlogin(self):
-        lp = LoginPage(self.driver)
-        lp.login()
+        LoginPage(self.driver)
 
     def tearDown(self):
         # 验证登陆成功

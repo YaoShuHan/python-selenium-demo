@@ -13,7 +13,7 @@ class LoginPage():
         self.driver.switch_to.frame("login_frame")
 
         """直接点击头像登陆"""
-        qqimage = findElements(self.driver, 'qqlog')
+        qqimage = findElement(self.driver, 'qqlog')
         qqimage.click()
 
         # """直接点击头像登陆"""
@@ -30,7 +30,18 @@ class LoginPage():
         # log_btn = driver.find_element(By.ID, "login_button")
         # log_btn.click()
 
-def findElements(driver, name):
+    # def allread(self):
+    #     try:
+    #         red_button = findElement(self.driver, 'red_btn')
+    #         red_button.click()
+    #
+    #     except:
+    #         print("没有找到全部已读按钮！")
+
+    # def feedbac
+
+
+def findElement(driver, name):
     try:
         ele = points[name]
         type = ele['type']
